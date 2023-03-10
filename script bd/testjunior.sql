@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 10-03-2023 a las 19:43:17
+-- Tiempo de generación: 10-03-2023 a las 20:14:40
 -- Versión del servidor: 5.7.39
 -- Versión de PHP: 7.4.33
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `testjunior`
 --
+CREATE DATABASE IF NOT EXISTS `testjunior` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `testjunior`;
 
 -- --------------------------------------------------------
 
@@ -42,7 +44,6 @@ CREATE TABLE `users` (
 --
 -- Volcado de datos para la tabla `users`
 --
-
 
 --
 -- Índices para tablas volcadas
