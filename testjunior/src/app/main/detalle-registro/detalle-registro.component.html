@@ -1,0 +1,50 @@
+<mat-card class="custom-card">
+    <mat-card-title class="custom-title">
+        <a routerLink="/registro" style="color:#fff">
+            <mat-icon>arrow_back</mat-icon>
+        </a>
+        
+        Datos de registro</mat-card-title>
+    <mat-card-content class="custom-content">
+        <div *ngIf="!user">No hay contenido</div>
+        <div *ngIf="user">
+            <div class="cont-item-head">
+                <mat-icon> person_pin</mat-icon>
+                {{user.firstname | uppercase}} {{user.lastname | uppercase}}
+            </div>
+            <div class="row">
+                <div class="col-md-6 cont-item">
+                    <b>Tipo de documento: </b>
+                    <span>{{user.documentType}}</span>
+                </div>
+    
+                <div class="col-md-6 cont-item">
+                    <b>Número de documento: </b>
+                    <span>{{user.documentNumber}}</span>
+                </div>
+    
+                <div class="col-md-6 cont-item">
+                    <b>Fecha de expedición: </b>
+                    <span>{{user.expeditionDate | date:'dd-MM-YYY'}}</span>
+                </div>
+    
+                <div class="col-md-6 cont-item">
+                    <b>Fecha de nacimiento: </b>
+                    <span>{{user.birthdate | date:'dd-MM-YYY'}}</span>
+                </div>
+    
+                <div class="col-md-6 cont-item">
+                    <b>Email: </b>
+                    <span>{{user.email}}</span>
+                </div>
+    
+                <div class="col-md-6 cont-item">
+                    <b>Celular: </b>
+                    <span>{{user.phoneNumber}}</span>
+                </div>
+            </div>
+        </div>
+        
+        
+    </mat-card-content>
+</mat-card>
