@@ -15,12 +15,6 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) { }
 
-  // addUser(user: User): Observable<Response> {
-  //   return this.http.post<Response>(`${this.apiUrl}user2s`, user, this.httpOptions).pipe(
-  //     tap((newUser: Response) => this.log(`user added w/ id=${newUser.user.id}`)),
-  //     catchError(this.handleError<Response>('addUser'))
-  //   );
-  // }
   addUser(user: User): Observable<Response> {
     return this.http.post<Response>(`${this.apiUrl}users`, user)
     .pipe(
